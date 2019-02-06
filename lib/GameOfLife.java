@@ -1,27 +1,27 @@
-public class GameOfLife {
+public class GameOfLife{
 	
-    private static final int	HEIGHT = 10;
-    private static final long	TIME   = 120*1;
+	private static final int	HEIGHT = 10;
+	private static final long	TIME   = 120*1;
 	
-    public static void main(String[] args) throws InterruptedException {
-	boolean [][] grid = new boolean[HEIGHT][HEIGHT];
-	
-        randomPattern(grid);    // random       pattern		
-//      showBlinker(grid);      // Blinker      pattern  
-//      showBeacon(grid);       // Beacon       pattern
-//      showToad(grid);         // Toad         pattern
-//      showGlider(grid);      	// Glider       pattern 
-//      showPentomino(grid);    // F-Pentomino  pattern
-//      showTumbler(grid);      // Tumbler      pattern
-//      showEight(grid);        // Figure Eight pattern     
+	public static void main(String[] args) throws InterruptedException {
+		boolean [][] grid = new boolean[HEIGHT][HEIGHT];
+		
+ 		randomPattern(grid);    // random       pattern
+//		showBlinker(grid);      // Blinker      pattern
+// 		showBeacon(grid);       // Beacon       pattern
+//              showToad(grid);         // Toad         pattern
+//	 	showGlider(grid);    	// Glider       pattern 
+//              showPentomino(grid);    // F-Pentomino  pattern
+//              showTumbler(grid);      // Tumbler      pattern
+//              showEight(grid);        // Figure Eight pattern     
 
-	while(true) {
-	     Thread.sleep(TIME);
-	     outPattern(grid);
-	     newPattern(grid);
-	     System.out.println("__________________________    next stage below -->");
+		while(true) {
+			Thread.sleep(TIME);
+			outPattern(grid);
+			newPattern(grid);
+			System.out.println("__________________________    next stage below -->");
+		}
 	}
-    }
 	
 	private static void newPattern(boolean[][] grid) {
 		boolean[][] tempGrid = new boolean[grid.length][grid[0].length];
@@ -81,21 +81,22 @@ public class GameOfLife {
 				grid[i][j] = Math.random() < 0.4;
 	}
 	
-	/*
-   * Blinker 
-   */
-  
-  private static void showBlinker(boolean[][] grid) {
+    /*
+     * Blinker
+     */
+	
+         
+    private static void showBlinker(boolean[][] grid) {
 		grid[2][3] = true;
 		grid[2][4] = true;
 		grid[2][5] = true;
-  }
+    }
         
-  /*
-   * Beacon
-	 */
+    /*
+     * Beacon
+     */
 	
-  private static void showBeacon(boolean[][] grid) {
+    private static void showBeacon(boolean[][] grid) {
 		grid[2][3] = true;
 		grid[2][4] = true;
 		
@@ -107,13 +108,13 @@ public class GameOfLife {
 		
 		grid[5][5] = true;
 		grid[5][6] = true;
-  }
+    }
         
-  /*
-   * Toad
-	 */
+    /*
+     * Toad
+     */
 	
-  private static void showToad(boolean[][] grid) {
+    private static void showToad(boolean[][] grid) {
 		grid[4][4] = true;
 		grid[4][5] = true;
 		grid[4][6] = true;
@@ -121,13 +122,13 @@ public class GameOfLife {
 		grid[5][5] = true;
 		grid[5][6] = true;
 		grid[5][7] = true;
-  }
+    }
         
-	/*
-	 * Glider  n.b. should carry on but reaches limit of array
-	 */
+    /*
+     * Glider  n.b. should carry on but reaches limit of array
+     */
 	 
-	private static void showGlider(boolean[][] grid) {
+    private static void showGlider(boolean[][] grid) {
 		grid[0][1] = true;
 		
 		grid[1][2] = true;
@@ -135,13 +136,13 @@ public class GameOfLife {
 		grid[2][0] = true;
 		grid[2][1] = true;
 		grid[2][2] = true;
-	}
+    }
 	
-  /*       
-   * F-Pentomino
-	 */
+    /*  
+     * F-Pentomino
+     */
 	
-  private static void showPentomino(boolean[][] grid) {
+    private static void showPentomino(boolean[][] grid) {
 		grid[2][3] = true;
 		grid[2][4] = true;
 		grid[2][5] = true;
@@ -150,13 +151,13 @@ public class GameOfLife {
 		grid[3][3] = true;
 		
 		grid[4][3] = true;
-	}
-	
-	/*
-	 * Tumbler
-	 */
+    }
+       
+    /*
+     * Tumbler
+     */
 	 
-	private static void showTumbler(boolean[][] grid) {
+    private static void showTumbler(boolean[][] grid) {
 		grid[0][2] = true;
 		grid[0][3] = true;
 		grid[0][5] = true;
@@ -184,14 +185,14 @@ public class GameOfLife {
 		grid[5][2] = true;
 		grid[5][6] = true;
 		grid[5][7] = true;
-	}
+    }
 	
-	/*
-	 * showEight
-	 */
+    /*
+     * showEight    
+     */
 	 
-	private static void showEight(boolean[][] grid) {
-		grid[2][2] = true;
+    private static void showEight(boolean[][] grid) {
+	        grid[2][2] = true;
 		grid[2][3] = true;
 		grid[2][4] = true;
 		
@@ -203,7 +204,7 @@ public class GameOfLife {
 		grid[4][3] = true;
 		grid[4][4] = true;
 		
-	  grid[5][5] = true;
+	        grid[5][5] = true;
 		grid[5][6] = true;
 		grid[5][7] = true;
 		
@@ -214,5 +215,5 @@ public class GameOfLife {
 		grid[7][5] = true;
 		grid[7][6] = true;
 		grid[7][7] = true;        
-  }
+    }
 }
