@@ -10,7 +10,7 @@ public class GameOfLife {
 //  showBlinker(grid);      // Blinker      pattern  
 //  showBeacon(grid);       // Beacon       pattern
 //  showToad(grid);         // Toad         pattern
-// 	showGlider(grid);      	// Glider       pattern 
+//  showGlider(grid);      	// Glider       pattern 
 //  showPentomino(grid);    // F-Pentomino  pattern
 //  showTumbler(grid);      // Tumbler      pattern
 //  showEight(grid);        // Figure Eight pattern     
