@@ -1,6 +1,8 @@
 Game of Life Candidate Instructions
-The Game of Life is set in an infinite two-dimensional grid inhabited by ìcellsî. Every cell interacts with up to eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. 
+The Game of Life is set in an infinite two-dimensional grid inhabited by ‚Äúcells‚Äù. Every cell interacts with up to eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent.
+
 From an initial seed grid the game "evolves" one iteration at a time. An iteration applies rules to the grid to determine its next state. These scenarios are:	
+
 Scenario 0: No interactions
 	Given a game of life
 	When there are no live cells
@@ -21,27 +23,93 @@ Scenario 4: Creation of Life
 	Given a game of life
 	When an empty position has exactly three neighbouring cells
 	Then a cell is created in this position
+	
 When applied these scenarios result in the following:	
 Scenario 5: Grid with no live cells
 	Given a game of life with the initial state containing no live cells
 	When the game evolves one turn
 	Then the next state also contains no live cells
 
-Continued overleafÖ
+Continued overleaf‚Ä¶
 
 
 
 Scenario 6: Expected game outcome for seeded grid
 
-	Given a game of life with the initial stateÖ
+	Given a game of life with the initial state‚Ä¶
 
-ïï ï	
+
+
+
+
+
+
+
+
+
+
+
+‚Ä¢
+‚Ä¢ 
+‚Ä¢
+
+
+
+
+
+
+
+
+
+
+
+	
 	When the game evolves one turn 
-	Then the next state isÖ 
+	Then the next state is‚Ä¶ 
 
-†ï †ï ï 
+
+
+
+
+
+
+¬†
+‚Ä¢ ‚Ä¢ ‚Ä¢ 
+
+
+
+
+
+
+
+
 	When the game evolves another turn 
-	Then the next state isÖ 
+	Then the next state is‚Ä¶ 
 
-ïï ï		
-	Key: ï = live cell
+
+
+
+
+
+
+
+
+
+
+
+‚Ä¢
+‚Ä¢ 
+‚Ä¢
+
+
+
+
+
+
+
+
+
+
+
+		
+	Key: ‚Ä¢ = live cell
