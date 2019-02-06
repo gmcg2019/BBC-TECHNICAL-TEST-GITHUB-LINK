@@ -1,27 +1,27 @@
 public class GameOfLife {
 	
-	private static final int	HEIGHT = 10;
-	private static final long	TIME   = 120*1;
+    private static final int	HEIGHT = 10;
+    private static final long	TIME   = 120*1;
 	
-	public static void main(String[] args) throws InterruptedException {
-		boolean [][] grid = new boolean[HEIGHT][HEIGHT];
+    public static void main(String[] args) throws InterruptedException {
+	boolean [][] grid = new boolean[HEIGHT][HEIGHT];
 	
-    randomPattern(grid);    // random       pattern		
-//  showBlinker(grid);      // Blinker      pattern  
-//  showBeacon(grid);       // Beacon       pattern
-//  showToad(grid);         // Toad         pattern
-//  showGlider(grid);      	// Glider       pattern 
-//  showPentomino(grid);    // F-Pentomino  pattern
-//  showTumbler(grid);      // Tumbler      pattern
-//  showEight(grid);        // Figure Eight pattern     
+        randomPattern(grid);    // random       pattern		
+//      showBlinker(grid);      // Blinker      pattern  
+//      showBeacon(grid);       // Beacon       pattern
+//      showToad(grid);         // Toad         pattern
+//      showGlider(grid);      	// Glider       pattern 
+//      showPentomino(grid);    // F-Pentomino  pattern
+//      showTumbler(grid);      // Tumbler      pattern
+//      showEight(grid);        // Figure Eight pattern     
 
-		while(true) {
-			Thread.sleep(TIME);
-			outPattern(grid);
-			newPattern(grid);
-			System.out.println("__________________________    next stage below -->");
-		}
+	while(true) {
+	     Thread.sleep(TIME);
+	     outPattern(grid);
+	     newPattern(grid);
+	     System.out.println("__________________________    next stage below -->");
 	}
+    }
 	
 	private static void newPattern(boolean[][] grid) {
 		boolean[][] tempGrid = new boolean[grid.length][grid[0].length];
